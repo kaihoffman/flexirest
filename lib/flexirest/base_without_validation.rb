@@ -7,7 +7,7 @@ module Flexirest
     include Recording
     include AttributeParsing
     include Associations
-
+    include KeepResponse
     attr_accessor :_status
     attr_accessor :_etag
     attr_accessor :_headers

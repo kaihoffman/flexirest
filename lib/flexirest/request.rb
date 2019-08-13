@@ -762,6 +762,10 @@ module Flexirest
           body
         end
       end
+      if options[:keep_response]
+        result._raw_response = @response.body
+      end
+
       if body.is_a? Array
         result = Flexirest::ResultIterator.new(@response)
         add_nested_body_to_iterator(result, body)
